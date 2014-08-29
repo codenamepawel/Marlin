@@ -562,7 +562,9 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // The RepRapDiscount Smart Controller (white PCB)
 // http://reprap.org/wiki/RepRapDiscount_Smart_Controller
-//#define REPRAP_DISCOUNT_SMART_CONTROLLER
+// dla malego lcd odkomentuj pierwsze, dla panelolu odkomentuj oba
+#define REPRAP_DISCOUNT_SMART_CONTROLLER
+#define REPRAP_PANELOLU //mod by Pawel
 
 // The GADGETS3D G3D LCD/SD Controller (blue PCB)
 // http://reprap.org/wiki/RAMPS_1.3/1.4_GADGETS3D_Shield_with_Panel
@@ -572,9 +574,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // http://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
 // ==> REMEMBER TO INSTALL U8glib to your ARDUINO library folder: http://code.google.com/p/u8glib/wiki/u8glib
-// dla malego lcd odkomentuj pierwsze, dla panelolu odkomentuj oba
 #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
-#define REPRAP_PANELOLU //mod by Pawel
 
 // The RepRapWorld REPRAPWORLD_KEYPAD v1.1
 // http://reprapworld.com/?products_details&products_id=202&cPath=1591_1626
