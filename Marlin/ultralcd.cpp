@@ -409,6 +409,7 @@ static void lcd_tune_menu()
 
 void lcd_preheat_pla0()
 {
+    enquecommand_P(PSTR("M80"));	
     setTargetHotend0(plaPreheatHotendTemp);
     setTargetBed(plaPreheatHPBTemp);
     fanSpeed = plaPreheatFanSpeed;
@@ -417,7 +418,8 @@ void lcd_preheat_pla0()
 }
 
 void lcd_preheat_abs0()
-{
+{   
+    enquecommand_P(PSTR("M80"));
     setTargetHotend0(absPreheatHotendTemp);
     setTargetBed(absPreheatHPBTemp);
     fanSpeed = absPreheatFanSpeed;
@@ -428,6 +430,7 @@ void lcd_preheat_abs0()
 #if TEMP_SENSOR_1 != 0 //2nd extruder preheat
 void lcd_preheat_pla1()
 {
+    enquecommand_P(PSTR("M80"));
     setTargetHotend1(plaPreheatHotendTemp);
     setTargetBed(plaPreheatHPBTemp);
     fanSpeed = plaPreheatFanSpeed;
@@ -437,6 +440,7 @@ void lcd_preheat_pla1()
 
 void lcd_preheat_abs1()
 {
+    enquecommand_P(PSTR("M80"));
     setTargetHotend1(absPreheatHotendTemp);
     setTargetBed(absPreheatHPBTemp);
     fanSpeed = absPreheatFanSpeed;
@@ -448,6 +452,7 @@ void lcd_preheat_abs1()
 #if TEMP_SENSOR_2 != 0 //3 extruder preheat
 void lcd_preheat_pla2()
 {
+    enquecommand_P(PSTR("M80"));
     setTargetHotend2(plaPreheatHotendTemp);
     setTargetBed(plaPreheatHPBTemp);
     fanSpeed = plaPreheatFanSpeed;
@@ -457,6 +462,7 @@ void lcd_preheat_pla2()
 
 void lcd_preheat_abs2()
 {
+    enquecommand_P(PSTR("M80"));
     setTargetHotend2(absPreheatHotendTemp);
     setTargetBed(absPreheatHPBTemp);
     fanSpeed = absPreheatFanSpeed;
@@ -468,6 +474,7 @@ void lcd_preheat_abs2()
 #if TEMP_SENSOR_1 != 0 || TEMP_SENSOR_2 != 0 //more than one extruder present
 void lcd_preheat_pla012()
 {
+    enquecommand_P(PSTR("M80"));
     setTargetHotend0(plaPreheatHotendTemp);
     setTargetHotend1(plaPreheatHotendTemp);
     setTargetHotend2(plaPreheatHotendTemp);
@@ -479,6 +486,7 @@ void lcd_preheat_pla012()
 
 void lcd_preheat_abs012()
 {
+    enquecommand_P(PSTR("M80"));
     setTargetHotend0(absPreheatHotendTemp);
     setTargetHotend1(absPreheatHotendTemp);
     setTargetHotend2(absPreheatHotendTemp);
@@ -491,6 +499,7 @@ void lcd_preheat_abs012()
 
 void lcd_preheat_pla_bedonly()
 {
+    enquecommand_P(PSTR("M80"));
     setTargetBed(plaPreheatHPBTemp);
     fanSpeed = plaPreheatFanSpeed;
     lcd_return_to_status();
@@ -499,6 +508,7 @@ void lcd_preheat_pla_bedonly()
 
 void lcd_preheat_abs_bedonly()
 {
+    enquecommand_P(PSTR("M80"));
     setTargetBed(absPreheatHPBTemp);
     fanSpeed = absPreheatFanSpeed;
     lcd_return_to_status();
