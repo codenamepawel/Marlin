@@ -543,7 +543,7 @@
 	#define MSG_BABYSTEPPING_Z "Babystepping w osi Z"
 	#define MSG_SERIAL_ERROR_MENU_STRUCTURE "Error in menu structure"
 #endif
-
+#endif
 
 #if LANGUAGE_CHOICE == 3
 
