@@ -759,11 +759,16 @@
       #define LCD_PINS_D7 29
 
       #ifdef REPRAP_DISCOUNT_SMART_CONTROLLER
-        #define BEEPER 37
-
-        #define BTN_EN1 31
-        #define BTN_EN2 33
-        #define BTN_ENC 35
+        #define BEEPER 37//orginal
+        #define BTN_EN1 31//orginal
+        #define BTN_EN2 33//orginal
+        #define BTN_ENC 35//orginal
+      #ifdef REPRAP_PANELOLU //mod by Pawel
+        #define BEEPER 33 //panelolu
+        #define BTN_EN1 35//panelolu
+        #define BTN_EN2 37//panelolu
+        #define BTN_ENC 31//panelolu      
+      #endif//mod by Pawel
 
         #define SDCARDDETECT 49
       #elif defined(LCD_I2C_PANELOLU2)
